@@ -1,15 +1,14 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import { FormsModule }    from '@angular/forms';
 
-import { AppComponent }  from './app.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroesComponent }     from './heroes.component';
-import { DashboardComponent }  from './dashboard.component'
+import { AppComponent }         from './app.component';
+import { DashboardComponent }   from './dashboard.component';
+import { HeroDetailComponent }  from './hero-detail.component';
+import { HeroesComponent }      from './heroes.component';
+import { HeroService }          from './hero.service';
 
-import { HeroService }         from './hero.service';
-import {AppRoutingModule}      from './app-routing.module'
+import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
   imports: [
@@ -17,10 +16,9 @@ import {AppRoutingModule}      from './app-routing.module'
     FormsModule,
     AppRoutingModule
   ],
-  
   declarations: [
-    DashboardComponent,
     AppComponent,
+    DashboardComponent,
     HeroDetailComponent,
     HeroesComponent
   ],
@@ -28,4 +26,3 @@ import {AppRoutingModule}      from './app-routing.module'
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
-
